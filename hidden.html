@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reveal Content with Circular Cursor</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      background: black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .content {
+      position: absolute;
+      inset: 0;
+      background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+      clip-path: circle(0% at 50% 50%);
+      -webkit-clip-path: circle(0% at 50% 50%);
+      transition: clip-path 0.2s, -webkit-clip-path 0.2s;
+    }
+
+    .container:hover .content {
+      clip-path: circle(10% at var(--x, 50%) var(--y, 50%));
+      -webkit-clip-path: circle(10% at var(--x, 50%) var(--y, 50%));
+    }
+
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content"></div>
+    <div class="hidden-text">Hover over to reveal!</div>
+  </div>
+
+  <script>
+    const container = document.querySelector('.container');
+    const content = document.querySelector('.content');
+
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      content.style.setProperty('--x', `${x}%`);
+      content.style.setProperty('--y', `${y}%`);
+    });
+  </script>
+</body>
+</html>
