@@ -1,0 +1,111 @@
+<html>
+
+<head>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Space+Mono&family=Poppins&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="screen.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <nav class="navbar" data-aos="fade-down" data-aos-delay="300">
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="first-page" id="home">
+        <h1 class="company-name">Its<br>Deligh</h1>
+        <h1>I create.<br>Profesional <span><i>Websites</i></span></h1>
+        <img src="images/girl1.png" alt="">
+        <section class="footer1" data-aos="fade-up" data-aos-delay="600">
+            <p data-aos="fade-down" data-aos-delay="700">Get something Valuable</p>
+            <p data-aos="fade-down" data-aos-delay="800">We work for <span><b>business</b></span> to reach potentials they deserve</p>
+            <div><button onclick="chatclick()">Connect Me</button>
+                <button onclick="window.open('https://www.instagram.com/its_deligh/', '_blank')">Social Reach</button>
+            </div>
+        </section>
+    </section>
+    <section class="second-page" id="services">
+        <div class="card-view" id="cardY">
+            <video src="images/web.mp4" autoplay muted loop ></video>
+            <div class="card-container" data-aos="fade-right">
+                <h1 data-aos="fade-right" data-aos-delay="500">Website Designs</h1>
+                <h3 data-aos="fade-right" data-aos-delay="600">Business and Portfolio and Web stores</h3>
+                <p data-aos="fade-right" data-aos-delay="700">Creative website can make you custumers stay and focus on what is important.UI/UX of a website make
+                    it visited more often and we are good at that.</p>
+                    <div class="feedback">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <Button onclick="chatclick()">Lets Chat</Button>
+                    </div>
+            </div>
+            
+
+        </div>
+
+        <div class="card-buttons">
+
+            <span onclick="onbuttonclick(0)"><img src="images/web-design.png" alt=""></span>
+            <span onclick="onbuttonclick(1)"><img src="images/install.png" alt=""></span>
+            <span onclick="onbuttonclick(2)"><img src="images/megaphone.png" alt=""></span>
+            <span onclick="onbuttonclick(3)"><img src="images/it-department.png" alt=""></span>
+            
+        </div>
+
+
+    </section>
+    <section class="third-pageM" id="portfolio">
+        <section class="third-page">
+            <div class="projectimage">
+                <div class="overlay">
+                    <section onclick="oclick(0)" class="o1"><h1>WEB <br><img src="images/share.png" alt=""></h1></section>
+                    <section onclick="oclick(1)" class="o1"><h1>APP<br><img src="images/share.png" alt=""></h1></section>
+                    <section onclick="oclick(2)" class="o1"><h1>DEV<br><img src="images/share.png" alt=""></h1></section>
+                    <section onclick="oclick(3)" class="o1"><h1>BACK<BR>END<br><img src="images/share.png" alt="">
+                    </h1></section>
+                    <section onclick="oclick(4)" class="o1"><h1>UI/UX<br><img src="images/share.png" alt=""></h1></section>
+                </div>
+            </div>
+            <h1 data-aos="fade-down" data-aos-delay="600">Online <i>Store</i> Site <img onclick="redirect(0)" src="images/chain.png" alt=""></h1>
+            <h4 data-aos="fade-down" data-aos-delay="700">Flutter - AppWrite - NodeJS - Dart</h4>
+            <p data-aos="fade-down" data-aos-delay="800">The Room Finding App is a platform designed to help users easily search for and rent rooms, shared
+                accommodations, or properties based on their preferences. It offers advanced filtering options like
+                location, price range, amenities, and room type. <br>It also provides recommendations based on user
+                preferences and real-time availability.</p>
+                <a href="">Read More <img src="images/redirect.png" alt=""></a>
+        </section>
+        
+
+    </section>
+    <section class="forth-page" id="contact">
+
+        <h1><U>Developer</U> <i>Shivam'</i></h1>
+        <div class="marquee">
+            <span> <span class="rotor">+</span> Welcome to Our Website!</span>
+            <span><span class="rotor">+</span> Check Out Our Latest Products!</span>
+            <span><span class="rotor">+</span> Contact Us Anytime!</span>
+            <span><span class="rotor">+</span> Continuous Marquee Animation!</span>
+          </div>
+          <h3>+917706989915 <img onclick="chatclick()" src="images/whatsapp.png" alt=""></h3>
+          <h5>syntaxshiva@gmail.com</h5>
+
+    </section>
+</body>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+  AOS.init();
+</script>
+<script src="my.js"></script>
+
+</html>
